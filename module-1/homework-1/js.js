@@ -13,7 +13,7 @@ const lastLetterFirstRow=firstRow.charAt(firstRowLength-1);
 const firstLetterSecondRow=secondRow.charAt(0);
 const lastLetterSecondRow=secondRow.charAt(secondRowLength-1);
 const firstLetterThirdRow=thirdRow.charAt(0);
-const lastLetterThirdRow=thirdRow.charAt(thirdRow.length-1);
+const lastLetterThirdRow=thirdRow.charAt(thirdRowLength-1);
 
 //TASK 4
 const firstSearch=firstRow.indexOf('[');
@@ -35,4 +35,3 @@ ${lastLetterThirdRow}
 ${firstSearch}
 ${secondSearch}`;
  console.log(message);
-
