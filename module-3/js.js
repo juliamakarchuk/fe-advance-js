@@ -2,10 +2,10 @@
 
 const alphabet = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
 const keyboard=alphabet.split("");
-const massiv= [keyboard.slice(0,12), keyboard.slice(12,23), keyboard.slice(23,33)];
-let wordHello=`${massiv[1][5]} ${massiv[0][2]} ${massiv[1][8]} ${massiv[1][8]} ${massiv[0][8]}`;
-let wordJavaScript=`${massiv[1][6]} ${massiv[1][0]} ${massiv[2][3]} ${massiv[1][0]} ${massiv[1][1]} ${massiv[2][2]} ${massiv[0][3]} ${massiv[0][7]} ${massiv[0][9]} ${massiv[0][4]}`;
-let wordTrainer=`${massiv[0][4]} ${massiv[0][3]} ${massiv[1][0]} ${massiv[0][7]} ${massiv[2][5]} ${massiv[0][2]} ${massiv[0][3]}`;
+const array= [keyboard.slice(0, keyboard.indexOf('a')), keyboard.slice(keyboard.indexOf('a'),keyboard.indexOf('z')), keyboard.slice(keyboard.indexOf('z'))];
+const wordHello=`${array[1][5]} ${array[0][2]} ${array[1][8]} ${array[1][8]} ${array[0][8]}`;
+const wordJavaScript=`${array[1][6]} ${array[1][0]} ${array[2][3]} ${array[1][0]} ${array[1][1]} ${array[2][2]} ${array[0][3]} ${array[0][7]} ${array[0][9]} ${array[0][4]}`;
+const wordTrainer=`${array[0][4]} ${array[0][3]} ${array[1][0]} ${array[0][7]} ${array[2][5]} ${array[0][2]} ${array[0][3]}`;
 console.log(wordHello);
 console.log(wordJavaScript);
 console.log(wordTrainer)
