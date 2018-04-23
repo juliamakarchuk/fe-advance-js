@@ -12,27 +12,27 @@ const isValidInput=userInput!==null&&!Number.isNaN(userInput);
 if(isValidInput){
       switch (true){
       	case userInput<=taba:
-          decision=confirm(`Есть места в группе ${nameTour}.Резервируем?`);
            tourPlaces=taba;
            nameTour=`Taba`;
+          decision=confirm(`Есть места в группе ${nameTour}.Резервируем?`);
            if(decision){
               result=tourPlaces-userInput;
               alert(`Приятного путешествия в группе ${nameTour}`);
               break;
            }
         case userInput<=sharm:
-          decision=confirm(`Есть места в группе ${nameTour}.Резервируем?`);
           tourPlaces=sharm;
           nameTour=`Sharm`;
+          decision=confirm(`Есть места в группе ${nameTour}.Резервируем?`);
           if(decision){
               result=tourPlaces-userInput;
               alert(`Приятного путешествия в группе ${nameTour}`);
               break;
            }
         case userInput<=hurgada:
-           decision=confirm(`Есть места в группе ${nameTour}.Резервируем?`);
            tourPlaces=hurgada;
            nameTour=`Hurgada`;
+           decision=confirm(`Есть места в группе ${nameTour}.Резервируем?`);
             if(decision){
               result=tourPlaces-userInput;
               alert(`Приятного путешествия в группе ${nameTour}`);
