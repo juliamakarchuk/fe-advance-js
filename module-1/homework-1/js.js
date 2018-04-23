@@ -1,37 +1,42 @@
+let sharm=15;
+let hurgada=25;
+let taba=6;
+let result;
+let decision;
+let nameTour;
+let tourPlaces;
 
-//TASK 1
-const firstRow="qwertyuiop[]";
-const secondRow="asdfghjkl;'";
-const thirdRow="zxcvbnm,./";
-//TASK 2
-const firstRowLength=firstRow.length;
-const secondRowLength=secondRow.length;
-const thirdRowLength=thirdRow.length;
-//TASK 3
-const firstLetterFirstRow=firstRow.charAt(0);
-const lastLetterFirstRow=firstRow.charAt(firstRowLength-1);
-const firstLetterSecondRow=secondRow.charAt(0);
-const lastLetterSecondRow=secondRow.charAt(secondRowLength-1);
-const firstLetterThirdRow=thirdRow.charAt(0);
-const lastLetterThirdRow=thirdRow.charAt(thirdRowLength-1);
+const number=Number(prompt(`Введите число`));
 
-//TASK 4
-const firstSearch=firstRow.indexOf('[');
-const secondSearch=firstRow.indexOf(']');
-//TASK 5
-const message=`
-${firstRow}
-${secondRow} 
-${thirdRow}
-${firstRowLength}
-${secondRowLength}
-${thirdRowLength}
-${firstLetterFirstRow}
-${lastLetterFirstRow}
-${firstLetterSecondRow}
-${lastLetterSecondRow}
-${firstLetterThirdRow}
-${lastLetterThirdRow}
-${firstSearch}
-${secondSearch}`;
- console.log(message);
+if(!isNaN(number)&&number>0){
+	if(number<=taba){
+      nameTour=`Taba`;
+      tourPlaces=taba;
+       decision=confirm(`Есть места в группе Taba.Резервируем?`);
+	}
+   else if(number<=sharm){
+        nameTour=`Sharm`;
+        tourPlaces=sharm;
+        decision=confirm(`Есть места в группе Sharm.Резервируем?`);
+   }
+   else if(number<=hurgada){
+        nameTour=`Hurgada`;
+        tourPlaces=hurgada;
+   	  decision=confirm(`Есть места в группе Hurgada.Резервируем?`);
+   }
+   else{
+   	alert(`Извините, мест нет`);
+   }
+ 
+ if(decision){
+        result=tourPlaces-number;
+        alert(`Приятного путешествия в группе ${nameTour}`);
+       }
+       else{
+        alert(`Нам очень жаль, приходите еще!`);
+       }
+ 
+}
+else{
+	alert(`Ошибка ввода`);
+}

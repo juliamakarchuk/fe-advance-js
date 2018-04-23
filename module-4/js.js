@@ -6,15 +6,15 @@ function addKeyboardLayout(alphabet){
 }
 console.log(addKeyboardLayout(alphabet));
 
-const alpha=addKeyboardLayout(alphabet);
+const abc=addKeyboardLayout(alphabet);
  function getRandCharInRow(row){
-    let randLetterLayout=alpha[row-1][Math.floor(Math.random()*(alpha[row-1].length))];
+    const randLetterLayout=abc[row-1][Math.floor(Math.random()*(abc[row-1].length))];
     return randLetterLayout;
  }
 console.log(`случайное число первой строки:   ${getRandCharInRow(1)}`);
  function getRandCharInAlph(){
-    let randRow = Math.floor(Math.random()*alpha.length);
-    let randLetter=alpha[randRow][Math.floor(Math.random()*alpha[randRow].length)];
+    const randRow = Math.floor(Math.random()*abc.length);
+    const randLetter=abc[randRow][Math.floor(Math.random()*abc[randRow].length)];
     return randLetter;
  }
 console.log(`случайное число:   ${getRandCharInAlph()}`);
