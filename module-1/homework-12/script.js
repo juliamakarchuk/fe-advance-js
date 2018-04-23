@@ -6,13 +6,13 @@ let nameTour;
 let result;
 let decision;
 
-let  userInput=Number(prompt(`Vedite chislo`));
+let  userInput=Number(prompt(`Введите число`));
 
 const isValidInput=userInput!==null&&!Number.isNaN(userInput);
 if(isValidInput){
       switch (true){
       	case userInput<=taba:
-          decision=confirm(`Do you wanna be in taba\`s group?`);
+          decision=confirm(`Есть места в группе ${nameTour}.Резервируем?`);
            tourPlaces=taba;
            nameTour=`Taba`;
            if(decision){
@@ -21,7 +21,7 @@ if(isValidInput){
               break;
            }
         case userInput<=sharm:
-          decision=confirm(`Do you wanna be in sharm\`s group?`);
+          decision=confirm(`Есть места в группе ${nameTour}.Резервируем?`);
           tourPlaces=sharm;
           nameTour=`Sharm`;
           if(decision){
@@ -30,7 +30,7 @@ if(isValidInput){
               break;
            }
         case userInput<=hurgada:
-           decision=confirm(`Do you wanna be in hurgada\`s group?`);
+           decision=confirm(`Есть места в группе ${nameTour}.Резервируем?`);
            tourPlaces=hurgada;
            nameTour=`Hurgada`;
             if(decision){
