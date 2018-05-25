@@ -25,12 +25,12 @@ const Cashier = function(name, products){
     this.changeAmount = 0;
     this.countTotalPrice = function(order){
         let sum = 0;
-         const entries = Object.entries(products);
+         const entriesProduct = Object.entries(products);
          const entriesOrder = Object.entries(order);
-        for(const value of entries) {
-            for(const Value of entriesOrder) {
-                if(value[0] === Value[0]){
-                    sum += value[1] * Value[1];
+        for(const value of entriesProduct) {
+            for(const valueTwo of entriesOrder) {
+                if(value[0] === valueTwo[0]){
+                    sum += value[1] * valueTwo[1];
                 }
 
             }
