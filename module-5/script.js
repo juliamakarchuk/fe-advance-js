@@ -54,7 +54,7 @@ function SocialBook(users=[], posts={}) {
     this.removeUserById=function(userId){
         let elementIndex;
         let arr=[];
-        let findAndRemove=users.find(function(elem){
+        let findAndRemove=this.users.find(function(elem){
             if(elem['id']===userId){
                 arr=users;
                 elementIndex=arr.indexOf(elem);
@@ -85,7 +85,7 @@ function SocialBook(users=[], posts={}) {
         return this.posts;
     }
     this.removePost=function(userId, postId){
-    let findAndRemove=posts[userId].find(function(elem){
+    let findAndRemove=this.posts[userId].find(function(elem){
         let postIndex;
         let arr=[];
         if(elem.id===postId){
@@ -100,7 +100,7 @@ function SocialBook(users=[], posts={}) {
     }
     this.getAllLikes=function(userId){
         let result;
-        for(const key in posts){
+        for(const key in this.posts){
             if(key===userId){
                 result=posts[key];
             }
@@ -110,20 +110,18 @@ function SocialBook(users=[], posts={}) {
     }
     this.addPostLikes=function(userId, postId){
           let result;
-          for(const key in posts){
+          for(const key in this.posts){
               if(key===userId){
                   result=posts[key];
               }
          }
-        let addLikes=result.map(elem=>({
-            ...elem,
-            likes:elem.likes+1
-        }));
-        return addLikes;
+         let findId=result.find(elem=>elem.id===postId);
+          findId.likes+=1;
+          return findId;
     }
     this.getPostsCount=function(userId){
         let result;
-        for(const key in posts) {
+        for(const key in this.posts) {
             if (key === userId) {
                 result = posts[key];
             }
