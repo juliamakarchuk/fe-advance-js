@@ -1,0 +1,38 @@
+
+.container{
+    display:flex;
+    flex-direction:column;
+    width:600px;
+    margin:0 auto;
+}
+
+input[type=text]{
+    border: 2px solid #848484;
+    border-radius: 4px;
+    height:20px;
+    width:130px;
+    color:#b2b2b2;
+}
+input[type=text]:focus {
+    background-color: lightblue;
+}
+.js-users, .clear-btn{
+    width:200px;
+    align-self:center;
+    padding:5px 5px;
+    border-radius:10px;
+}
+button{
+    background-color: lightblue;
+    border:2px solid #249f8f;
+}
+form>button{
+    border-radius:5px;
+}
+form{
+    margin-bottom:10px
+}
+.result{
+    border:3px solid #bcd4d1;
+    padding:20px 10px;
+}
