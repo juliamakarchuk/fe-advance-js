@@ -1,0 +1,14 @@
+.js-form{
+    display:flex;
+    width:80%;
+    margin:0 auto;
+    justify-content: space-around;
+}
+.js-form>section{
+    width:30%;
+}
+.js-form>button{
+   height:30px;
+   width:50px;
+   align-self: center;
+}
