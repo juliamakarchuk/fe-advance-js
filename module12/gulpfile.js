@@ -42,10 +42,6 @@ gulp.task('browser-sync', function(){
 });
 gulp.task('html',function(){
    return gulp.src('app/*.html')
-   .pipe(html({
-    collapseWhitespace: true,
-   }))
-   .pipe(rename('index-min.html'))
    .pipe(gulp.dest('app'))
 });
 
@@ -68,7 +64,7 @@ gulp.task('build',['clean','sass','script','html','img'], function(){
     let buildCss=gulp.src('app/css/main.css')
     .pipe(gulp.dest('dist/css'));
 
-    let buildHTML=gulp.src('app/index-min.html')
+    let buildHTML=gulp.src('app/index.html')
     .pipe(gulp.dest('dist'));
 
     let buildJS=gulp.src('app/js/script-min.js')
