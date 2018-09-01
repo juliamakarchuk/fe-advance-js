@@ -5,7 +5,13 @@
     background-color:white;
     padding: 2.5rem 1rem;
     margin-bottom: 1.75rem;
+    -webkit-transition: -webkit-transform 0.2s linear;
+    transition: -webkit-transform 0.2s linear;
+    -o-transition: transform 0.2s linear;
     transition: transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+    -webkit-transition: background-color 0.5s linear;
+    -o-transition: background-color 0.5s linear;
     transition: background-color 0.5s linear;
 }
 .services-block-title{
@@ -59,7 +65,9 @@
 }
 .services-block:hover{
     background-color:#00917b;
-    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+            transform: scale(1.01);
     z-index: 1;
 }
 .services-block:hover .services-block-btn{
@@ -75,9 +83,14 @@
 /*-------------------------------------768px--------------------------------*/
 @media (min-width:760px){
     .services-blocks-body{
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
-        flex-wrap:wrap;
-        justify-content: space-between;
+        -ms-flex-wrap:wrap;
+            flex-wrap:wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
     .services-block{
         width:48%;

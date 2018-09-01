@@ -51,8 +51,11 @@
     background-image: url('../icons/social/twitter-circular-button.svg');
 }
 .member-item:hover{
-    transform: scale(1.02);
-    box-shadow: 0px 1px 44px -1px rgba(92,86,92,0.73);
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02);
+    -webkit-box-shadow: 0px 1px 44px -1px rgba(92,86,92,0.73);
+            box-shadow: 0px 1px 44px -1px rgba(92,86,92,0.73);
 }
 /*-------------------------------------768px---------------------------------*/
 @media (min-width:768px){
@@ -61,9 +64,14 @@
 /*-------------------------------------1024px--------------------------------*/
 @media (min-width:1024px){
     .members-blocks{
+       display:-webkit-box;
+       display:-ms-flexbox;
        display:flex;
-       flex-wrap: wrap;
-       justify-content: space-between;
+       -ms-flex-wrap: wrap;
+           flex-wrap: wrap;
+       -webkit-box-pack: justify;
+           -ms-flex-pack: justify;
+               justify-content: space-between;
     }
     .member-item{
         width:32.5%;
