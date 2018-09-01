@@ -68,6 +68,11 @@
 
 /*-------------------------------------768px---------------------------------*/
 @media (min-width:768px){
+    .works-blocks{
+        -webkit-box-pack: space-between;
+            -ms-flex-pack: space-between;
+                justify-content:space-between;
+    }
     .work-block{
         width:49%;
     }
